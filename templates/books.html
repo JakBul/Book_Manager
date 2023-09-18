@@ -1,32 +1,28 @@
-{% extends "base.html" %} {% block content %} {% for book in books %}
-{{book.book_name }}<br />
-{{ book.category_name }}<br />
-{{ book.author_name }}<br />
-{{ book.image_url }}<br />
-{{ book.book_summary }}<br />
-{{ book.must_read }}<br />
-{{ book.book_url }}<br />
-{% endfor %}
+{% extends "base.html" %} {% block content %}
 
 <ul class="collapsible popout">
+  {% for book in books %}
   <li>
     <div class="collapsible-header white-text cyan darken-3 text-shadow">
-      <i class="fas fa-caret-down"></i>First
+      <i class="fas fa-caret-down"></i>
+      <strong>{{ book.book_name }}</strong>
+      {% if book.must_read == "on" %}
+      <i
+        class="fas fa-book cyan-text text-lighten-3 tooltipped"
+        data-position="right"
+        data-tooltip="This book is a must read!"
+      ></i>
+      {% endif %}
     </div>
-    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-  </li>
-  <li>
-    <div class="collapsible-header white-text cyan darken-3 text-shadow">
-      <i class="fas fa-caret-down"></i>Second
+    <div class="collapsible-body">
+      <strong>{{ book.category_name }}</strong>
+      <p>{{ book.author_name }}</p>
+      <img src="{{ book.image_url }}" alt="" />
+      <p>{{ book.book_summary }}</p>
+      <a href="{{ book.book_url }}">Link to Buy</a>
     </div>
-    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
   </li>
-  <li>
-    <div class="collapsible-header white-text cyan darken-3 text-shadow">
-      <i class="fas fa-caret-down"></i>Third
-    </div>
-    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-  </li>
+  {% endfor %}
 </ul>
 
 {% endblock %}
