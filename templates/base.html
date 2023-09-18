@@ -28,7 +28,7 @@
   <body>
     <header>
       <!-- Top Navbar (Materialize) -->
-      <nav class="nav-extended text-shadow cyan darken-3">
+      <nav class="nav-extended text-shadow cyan darken-2">
         <div class="nav-wrapper">
           <a href="{{ url_for('get_books') }}" class="brand-logo"
             >Book Manager</a
@@ -58,7 +58,7 @@
       <!-- Mobile Side Navbar (Materialize) -->
       <ul class="sidenav" id="mobile-demo">
         <li>
-          <h4 class="center-align cyan-text text-darken-3">Book Manager</h4>
+          <h4 class="center-align cyan-text text-darken-2">Book Manager</h4>
         </li>
         <li><a href="{{ url_for('get_books') }}">Home</a></li>
         {% if session.user %}
