@@ -2,18 +2,97 @@
 
 <h3 class="cyan-text text-darken-3 center-align">Add Book</h3>
 
-<div class="row">
+<div class="row card-panel grey lighten-4">
   <form class="col s12" method="POST" action="">
-    <div class="row">
-      <div class="input-field col m6 s12">
+    <div class="row col m6 s12">
+      <div class="input-field">
         <i class="fas fa-book prefix cyan-text text-darken-3"></i>
-        <input id="icon_prefix" type="text" class="validate" />
-        <label for="icon_prefix">Book Name</label>
+        <input
+          id="book_name"
+          name="book_name"
+          minlength="2"
+          maxlength="50"
+          type="text"
+          class="validate"
+          required
+        />
+        <label for="book_name">Book Name</label>
       </div>
-      <div class="input-field col m6 s12">
+    </div>
+    <div class="row col m6 s12">
+      <div class="input-field">
         <i class="fas fa-user prefix cyan-text text-darken-3"></i>
-        <input id="icon_telephone" type="tel" class="validate" />
-        <label for="icon_telephone">Author Name</label>
+        <input
+          id="author_name"
+          name="author_name"
+          minlength="5"
+          maxlength="50"
+          type="text"
+          class="validate"
+          required
+        />
+        <label for="author_name">Author Name</label>
+      </div>
+    </div>
+    <div class="row col s12">
+      <div class="input-field">
+        <i class="fas fa-image prefix cyan-text text-darken-3"></i>
+        <input
+          id="image_url"
+          name="image_url"
+          minlength="10"
+          type="text"
+          class="validate"
+        />
+        <label for="image_url">URL Image</label>
+      </div>
+    </div>
+    <div class="row col s12">
+      <div class="input-field">
+        <i class="fas fa-pencil-alt prefix cyan-text text-darken-3"></i>
+        <textarea
+          id="book_summary"
+          name="book_summary"
+          minlength="20"
+          maxlength="200"
+          type="text"
+          class="validate materialize-textarea validate"
+          required
+        ></textarea>
+        <label for="book_summary">Book summary</label>
+        <span class="helper-text" data-error="wrong" data-success="right"
+          >Tell us a bit more about the book!</span
+        >
+      </div>
+    </div>
+    <div class="row col m6 s12">
+      <div class="input-field">
+        <div class="switch">
+          <i
+            class="fas fa-exclamation-circle prefix cyan-text text-darken-3"
+          ></i>
+          <label for="must_read">
+            <input type="checkbox" id="must_read" name="must_read" />
+            <span class="lever"></span>
+            Is this book a must read?
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row col s12">
+      <div class="input-field">
+        <i class="fas fa-align-left prefix cyan-text text-darken-3"></i>
+        <input
+          id="book_url"
+          name="book_url"
+          minlength="10"
+          type="text"
+          class="validate"
+        />
+        <label for="book_url">Book URL</label>
+        <span class="helper-text" data-error="wrong" data-success="right"
+          >Provide a link where we can buy the book</span
+        >
       </div>
     </div>
   </form>
