@@ -67,6 +67,25 @@
     </div>
     <div class="row col m6 s12">
       <div class="input-field">
+        <i class="fas fa-align-left prefix cyan-text text-darken-3"></i>
+        <select
+          id="category_name"
+          name="category_name"
+          class="validate"
+          required
+        >
+          <option value="" disabled selected>Choose Category</option>
+          {% for category in categories %}
+          <option value="{{ category.category_name }}">
+            {{ category.category_name }}
+          </option>
+          {% endfor %}
+        </select>
+        <label for="category_name">Book Category</label>
+      </div>
+    </div>
+    <div class="row col m6 s12">
+      <div class="input-field">
         <div class="switch">
           <i
             class="fas fa-exclamation-circle prefix cyan-text text-darken-3"
@@ -81,7 +100,7 @@
     </div>
     <div class="row col s12">
       <div class="input-field">
-        <i class="fas fa-align-left prefix cyan-text text-darken-3"></i>
+        <i class="fas fa-folder-open prefix cyan-text text-darken-3"></i>
         <input
           id="book_url"
           name="book_url"
@@ -91,7 +110,7 @@
         />
         <label for="book_url">Book URL</label>
         <span class="helper-text" data-error="wrong" data-success="right"
-          >Provide a link where we can buy the book</span
+          >Provide a link where we can buy the book!</span
         >
       </div>
     </div>
