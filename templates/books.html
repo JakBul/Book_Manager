@@ -1,5 +1,7 @@
 {% extends "base.html" %} {% block content %}
 
+<h3 class="cyan-text text-darken-3 center-align">All Books</h3>
+
 <ul class="collapsible popout">
   {% for book in books %}
   <li>
@@ -20,6 +22,7 @@
       <img src="{{ book.image_url }}" alt="" />
       <p>{{ book.book_summary }}</p>
       <a href="{{ book.book_url }}">Link to Buy</a>
+      <p><em>by: {{ book.created_by }}</em></p>
     </div>
   </li>
   {% endfor %}
