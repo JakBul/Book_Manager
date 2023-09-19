@@ -1,0 +1,136 @@
+{% extends "base.html" %} {% block content %}
+
+<h3 class="cyan-text text-darken-3 center-align">Edit Book</h3>
+
+<div class="row card-panel grey lighten-4">
+  <form
+    class="col s12"
+    method="POST"
+    action="{{ url_for('edit_book', book_id=book._id) }}"
+  >
+    <!-- Book Name -->
+    <div class="row col m6 s12">
+      <div class="input-field">
+        <i class="fas fa-book prefix cyan-text text-darken-3"></i>
+        <input
+          id="book_name"
+          name="book_name"
+          minlength="2"
+          maxlength="50"
+          type="text"
+          class="validate"
+          required
+        />
+        <label for="book_name">Book Name</label>
+      </div>
+    </div>
+    <!-- Author Name -->
+    <div class="row col m6 s12">
+      <div class="input-field">
+        <i class="fas fa-user prefix cyan-text text-darken-3"></i>
+        <input
+          id="author_name"
+          name="author_name"
+          minlength="5"
+          maxlength="50"
+          type="text"
+          class="validate"
+          required
+        />
+        <label for="author_name">Author Name</label>
+      </div>
+    </div>
+    <div class="row col s12">
+      <div class="input-field">
+        <i class="fas fa-image prefix cyan-text text-darken-3"></i>
+        <input
+          id="image_url"
+          name="image_url"
+          minlength="10"
+          type="text"
+          class="validate"
+        />
+        <label for="image_url">URL Image</label>
+      </div>
+    </div>
+    <!-- Book Summary -->
+    <div class="row col s12">
+      <div class="input-field">
+        <i class="fas fa-pencil-alt prefix cyan-text text-darken-3"></i>
+        <textarea
+          id="book_summary"
+          name="book_summary"
+          minlength="20"
+          maxlength="400"
+          type="text"
+          class="validate materialize-textarea validate"
+          required
+        ></textarea>
+        <label for="book_summary">Book summary</label>
+        <span class="helper-text">Tell us a bit more about the book!</span>
+      </div>
+    </div>
+    <!-- Categories -->
+    <div class="row col m6 s12">
+      <div class="input-field">
+        <i class="fas fa-align-left prefix cyan-text text-darken-3"></i>
+        <select
+          id="category_name"
+          name="category_name"
+          class="validate"
+          required
+        >
+          <option value="" disabled selected>Choose Category</option>
+          {% for category in categories %}
+          <option value="{{ category.category_name }}">
+            {{ category.category_name }}
+          </option>
+          {% endfor %}
+        </select>
+        <label for="category_name">Book Category</label>
+      </div>
+    </div>
+    <!-- Must read -->
+    <div class="row col m6 s12">
+      <div class="input-field">
+        <div class="switch">
+          <i
+            class="fas fa-exclamation-circle prefix cyan-text text-darken-3"
+          ></i>
+          <label for="must_read">
+            <input type="checkbox" id="must_read" name="must_read" />
+            <span class="lever"></span>
+            Is this book a must read?
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- Book URL -->
+    <div class="row col s12">
+      <div class="input-field">
+        <i class="fas fa-folder-open prefix cyan-text text-darken-3"></i>
+        <input
+          id="book_url"
+          name="book_url"
+          minlength="10"
+          type="text"
+          class="validate"
+        />
+        <label for="book_url">Book URL</label>
+        <span class="helper-text" data-error="wrong" data-success="right"
+          >Provide a link where we can buy the book!</span
+        >
+      </div>
+    </div>
+    <!-- Submit Button -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <button type="submit" class="btn-large cyan darken-1 text-shadow">
+          Edit Book <i class="fas fa-edit right"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
