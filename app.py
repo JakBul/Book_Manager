@@ -120,8 +120,22 @@ def add_book():
 
 @app.route("/edit_book/<book_id>", methods=["GET", "POST"])
 def edit_book(book_id):
-    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    if request.method == "POST":
+        must_read = "on" if request.form.get("must_read") else "off"
+        submit = {
+            "$set": {"category_name": request.form.get("category_name")},
+            "$set": {"book_name": request.form.get("book_name")},
+            "$set": {"author_name": request.form.get("author_name")},
+            "$set": {"image_url": request.form.get("image_url")},
+            "$set": {"book_summary": request.form.get("book_summary")},
+            "$set": {"must_read": must_read},
+            "$set": {"book_url": request.form.get("book_url")},
+            "$set": {"created_by": session["user"]}
+        }
+        mongo.db.books.update_one({"_id": ObjectId(book_id)}, submit)
+        flash("Book Successfully Updated")
 
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_book.html", book=book,  categories=categories)
 
