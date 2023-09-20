@@ -45,7 +45,11 @@
               >
             </li>
             <li><a href="{{ url_for('add_book') }}">New Book</a></li>
-            <li><a href="#">Manage Categories</a></li>
+            {% if session.user|lower == "admin"|lower %}
+            <li>
+              <a href="{{ url_for('get_categories') }}">Manage Categories</a>
+            </li>
+            {% endif %}
             <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
             {% else %}
             <li><a href="{{ url_for('signin') }}">Sign In</a></li>
@@ -68,7 +72,9 @@
           >
         </li>
         <li><a href="{{ url_for('add_book') }}">New Book</a></li>
-        <li><a href="#">Manage Categories</a></li>
+        {% if session.user|lower == "admin"|lower %}
+        <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+        {% endif %}
         <li><a href="{{ url_for('signout') }}">Sign Out</a></li>
         {% else %}
         <li><a href="{{ url_for('signin') }}">Sign In</a></li>
