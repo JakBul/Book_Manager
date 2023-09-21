@@ -130,14 +130,14 @@ def edit_book(book_id):
     if request.method == "POST":
         must_read = "on" if request.form.get("must_read") else "off"
         submit = {
-            "$set": {"category_name": request.form.get("category_name")},
-            "$set": {"book_name": request.form.get("book_name")},
-            "$set": {"author_name": request.form.get("author_name")},
-            "$set": {"image_url": request.form.get("image_url")},
-            "$set": {"book_summary": request.form.get("book_summary")},
-            "$set": {"must_read": must_read},
-            "$set": {"book_url": request.form.get("book_url")},
-            "$set": {"created_by": session["user"]}
+            "$set": {"category_name": request.form.get("category_name"),
+                     "book_name": request.form.get("book_name"),
+                     "author_name": request.form.get("author_name"),
+                     "image_url": request.form.get("image_url"),
+                     "book_summary": request.form.get("book_summary"),
+                     "must_read": must_read,
+                     "book_url": request.form.get("book_url"),
+                     "created_by": session["user"]}
         }
         mongo.db.books.update_one({"_id": ObjectId(book_id)}, submit)
         flash("Book Successfully Updated")
