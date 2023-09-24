@@ -31,7 +31,7 @@
       <nav class="nav-extended cyan darken-3">
         <div class="nav-wrapper">
           <a
-            href="{{ url_for('get_books') }}"
+            href="{{ url_for('home') }}"
             class="brand-logo left lime-text text-lighten-5 flow-text"
             >Book Manager</a
           >
@@ -40,7 +40,10 @@
           ></a>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a href="{{ url_for('get_books') }}">Home</a>
+              <a href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li>
+              <a href="{{ url_for('get_books') }}">Books</a>
             </li>
             {% if session.user %}
             <li>
@@ -68,7 +71,12 @@
         <li>
           <h4 id="logo" class="center-align black-text">Book Manager</h4>
         </li>
-        <li><a href="{{ url_for('get_books') }}">Home</a></li>
+        <li>
+          <a href="{{ url_for('home') }}">Home</a>
+        </li>
+        <li>
+          <a href="{{ url_for('get_books') }}">Books</a>
+        </li>
         {% if session.user %}
         <li>
           <a href="{{ url_for('profile', username=session['user']) }}"
@@ -103,20 +111,24 @@
       <div class="container">
         <div class="row">
           <div class="col l6 m6 s12">
-            <h5 id="logo" class="lime-text text-lighten-5">Book manager</h5>
+            <h5 id="logo" class="footer-heading lime-text text-lighten-5">
+              Book manager
+            </h5>
             <br />
             <p class="lime-text text-lighten-5">
-              Place where you can share your favourite books. Anytime from
-              anywhere.
+              This is the place where you can share your favourite books with
+              other people. Anytime from anywhere.
             </p>
           </div>
           <div class="col l4 offset-l2 m4 offset-m2 s12">
-            <h5 id="logo" class="lime-text text-lighten-5">Social Media</h5>
+            <h5 id="logo" class="footer-heading lime-text text-lighten-5">
+              Social Media
+            </h5>
             <ul>
               <li>
                 <i class="fab fa-facebook"></i>
                 <a
-                  class="lime-text text-lighten-5"
+                  class="lime-text text-lighten-5 hoverable"
                   href="https://www.facebook.com/"
                   target="_blank"
                   >Facebook
@@ -125,7 +137,7 @@
               <li>
                 <i class="fab fa-instagram"></i>
                 <a
-                  class="lime-text text-lighten-5"
+                  class="lime-text text-lighten-5 hoverable"
                   href="https://www.instagram.com/"
                   target="_blank"
                   >Instagram</a
@@ -134,7 +146,7 @@
               <li>
                 <i class="fab fa-youtube"></i>
                 <a
-                  class="lime-text text-lighten-5"
+                  class="lime-text text-lighten-5 hoverable"
                   href="https://www.youtube.com/"
                   target="_blank"
                   >Youtube</a
@@ -143,7 +155,7 @@
               <li>
                 <i class="fab fa-twitter"></i>
                 <a
-                  class="lime-text text-lighten-5"
+                  class="lime-text text-lighten-5 hoverable"
                   href="https://www.twitter.com/"
                   target="_blank"
                   >Twitter</a

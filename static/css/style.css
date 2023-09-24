@@ -61,7 +61,7 @@ nav ul a {
 
 .card-image img {
     max-height: 180px;
-    max-width: auto;
+    max-width: 100%;
 }
 
 #book-card {
@@ -74,3 +74,45 @@ nav ul a {
 }
 
 /*---------------------------------------------------- Footer */
+footer .footer-heading {
+    font-size: 2rem;
+}
+
+/*---------------------------------------------------- Home.html page */
+
+#rules {
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 20px 0 20px 0;
+    margin-bottom: 40px;
+}
+
+#rules h6 {
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+#rules ul li {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+#categories {
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 0 20px 0 20px;
+    margin-bottom: 40px;
+}
+
+#categories h6 {
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+#categories ul li {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
