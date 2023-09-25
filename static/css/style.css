@@ -116,3 +116,17 @@ footer .footer-heading {
     font-weight: 600;
     font-size: 1.25rem;
 }
+
+/*---------------------------------------------------- 404.html page */
+
+#error {
+    margin-top: 40px 0 40px 0;
+}
+
+#error .error-message p {
+    font-size: 1.5rem;
+}
+
+#error .error-message a {
+    margin-top: 40px;
+}

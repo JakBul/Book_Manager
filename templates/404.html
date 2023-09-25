@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row">
+  <div id="error" class="col s12 black-text">
+    <h1 class="center-align">Sorry, something went wrong..</h1>
+    <div class="error-message center-align">
+      <p>Please, click on the button below to take you back to Home page</p>
+      <a href="{{ url_for('home') }}" class="btn-large light-blue lighten-1">Home</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
