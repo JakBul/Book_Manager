@@ -130,3 +130,9 @@ footer .footer-heading {
 #error .error-message a {
     margin-top: 40px;
 }
+
+/*---------------------------------------------------- categories.html page */
+
+#categories-card-title {
+    font-weight: 500;
+}
