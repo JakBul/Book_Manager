@@ -1,39 +1,53 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# BOOK MANAGER
 
-Welcome,
+[Visit the website here](https://flask-book-manager-f03e235c4fb6.herokuapp.com)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Here goes mockup = https://ui.dev/amiresponsive?url=https://flask-book-manager-f03e235c4fb6.herokuapp.com
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+This project was created as a web app application using Python, Flask framework, MongoDB non-relational database system and Heroku cloud platform. It was made for educational purposes only.
 
-## Codeanywhere Reminders
+The website is made up of multiple pages which change accordingly to interaction of a user. After the first opening appears: 'Home', 'Books', 'Sign In' and 'Register' possible pages in the navigation menu. After logging in, a visitor can also 'Add Book' or 'Sign Out'.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+The business goals for this website are:
 
-`python3 -m http.server`
+1. To boost our Book Manager brand awareness and interact with its users
+2. To achieve higher reachability and get more leads
+3. To build database of users
+4. To increase sales from new and returning customers
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+The user goals of this website are:
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+1. As a first-time visitor, ...
+2. As a recurring or first-time visitor, ..
+3. As an admin, ...
 
-`http_server`
+## UX
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### **Strategy**
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Considering the core UX principles, as first I started to think about the strategy for this website and defined who the target users would be and what features/technologies they would want.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Book Manager target users are:
 
-To log into the Heroku toolbelt CLI:
+* Aged 01-99
+* Book lovers, anyone who loves to read and want to share it
+* Would like to meet new people
+* Would like to get inspired by others recommendations
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+What these users would be looking for:
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* Clear information on how to follow through the website and easy-to-use navigation
+* Good & simple-looking design which makes the website look desirable
+* Possibility to register and share their ideas
+* Possibility to search through books by author, book or category name
+* Access to social media links to follow the news
 
----
+This project has been built to offer all of these things. An effort was taken to provide as intuitive interaction as possible for every user visiting the webpage.
 
-Happy coding!
+Due to the wide age group of the users, it is assumed that most users will be viewing the site not only on their mobile phones but also on their tablets or computers. Therefore, creating something responsive is integral to the design.
+
+### **Scope**
+
+To achieve the desired user and business goals, the following features will be included in this release:
+
+* Simple Home section with navigation panel and information below, including footer as well
