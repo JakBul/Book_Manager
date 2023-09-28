@@ -2,9 +2,9 @@
 
 [Visit the website here](https://flask-book-manager-f03e235c4fb6.herokuapp.com)
 
-Here goes mockup = https://ui.dev/amiresponsive?url=https://flask-book-manager-f03e235c4fb6.herokuapp.com
+![screenshot](documentation/mockup.png)
 
-This project was created as a web app application using Python, Flask framework, MongoDB non-relational database system and Heroku cloud platform. It was made for educational purposes only.
+This project was created as a web app application using Python, Flask framework, MongoDB non-relational database system and Heroku Cloud platform. It was made for educational purposes only.
 
 The business goals for this website are:
 
@@ -42,7 +42,6 @@ What these users would be looking for:
 
 This project has been built to offer all of these things. An effort was taken to provide as intuitive interaction as possible for every user visiting the webpage.
 
-Due to the wide age group of the users, it is assumed that most users will be viewing the site not only on their mobile phones but also on their tablets or computers. Therefore, creating something responsive is integral to the design.
 
 ### **Scope**
 
@@ -91,7 +90,7 @@ I chose a color palette based around white & black as these colors are elegant a
 
 I used [coolors.co](https://coolors.co/ffffff-000000-f9fbe7-00838f-29b6f6-e57373) to help me generate my color palette.
 
-![screenshot](assets/documentation/coolors.png)
+![screenshot](documentation/coolors.png)
 
 The colors has been mainly used with the help of Materialize.
 
@@ -106,3 +105,27 @@ I decided to use Google font 'Lato' with different font weights throughout the p
 * [Skranji](https://fonts.google.com/specimen/Skranji) 
 
 ## Features
+
+Due to the wide age group of the users, it is assumed that most users will be viewing the site not only on their mobile phones but also on their tablets or computers. Therefore, creating something responsive is integral to the design.
+
+### Existing Features
+
+- **Home Page**
+
+Home Page contains
+
+![screenshot](documentation/home_page.png)
+
+![screenshot](documentation/books_page.png)
+
+![screenshot](documentation/register_page.png)
+
+![screenshot](documentation/signin_page.png)
+
+![screenshot](documentation/add_book_page.png)
+![screenshot](documentation/added_book_by_user.png)
+
+![screenshot](documentation/hdit_page.png)
+![screenshot](documentation/404_page.png)
+
+![screenshot](documentation/favicon.png)
