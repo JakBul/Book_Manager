@@ -8,16 +8,18 @@ This project was created as a web app application using Python, Flask framework,
 
 The business goals for this website are:
 
-1. To boost our Book Manager brand awareness and interact with its users
+1. To boost the Book Manager brand awareness and interact with its users
 2. To achieve higher reachability and get more leads
 3. To build database of users
 4. To increase sales from new and returning customers
 
 The user goals of this website are:
 
-1. As a first-time visitor, ...
-2. As a recurring or first-time visitor, ..
-3. As an admin, ...
+1. As a first-time visitor, I want to be able to register on the page, sign-in and add a book to the book manager
+2. As a recurring or first-time visitor, I want to be able to find the books in the book manager and search through them, find the information about them and possibly buy them
+3. As a recurring visitor, I want to be able to access the book I uploaded on the website and be able to delete or edit it
+4. As an administrator, I should be able to manage categories of the books
+5. As an administrator, I should be able to have access to the database
 
 ## UX
 
@@ -42,7 +44,6 @@ What these users would be looking for:
 
 This project has been built to offer all of these things. An effort was taken to provide as intuitive interaction as possible for every user visiting the webpage.
 
-
 ### **Scope**
 
 To achieve the desired user and business goals, the following features will be included in this release:
@@ -58,7 +59,7 @@ To achieve the desired user and business goals, the following features will be i
 
 ### **Structure**
 
-The app's Back End has been built using Python, especially routing and template method with Flask framework to be more flexible and less time wasting. All data are saved on MongoDB and fully accessible through provided dashboard. Connection to database has been coded through Python. Passwords are put through hashing algorithm for basic security hygiene. Routing has also been used to create 404 and 500 response pages.
+The app's Back End has been built using Python, especially routing and template method with Flask framework to be more flexible and less time wasting. All data are saved on MongoDB and fully accessible through the provided dashboard. Connection to database has been coded through Python. Passwords are put through hashing algorithm for basic security hygiene. Routing has also been used to create 404 and 500 response pages.
 
 The website is made up of multiple pages which change accordingly to interaction of the user. After the first opening appears 'Home' page with navigation menu for: 'Home', 'Books', 'Sign In' and 'Register' pages. After logging in, a visitor can see 'Add Book' or 'Sign Out' as well. The navigation is always visible and accessible.
 
@@ -102,7 +103,7 @@ I decided to use Google font 'Lato' with different font weights throughout the p
 
 * [Sans-serif](https://fonts.google.com/knowledge/glossary/sans_serif)
 
-* [Skranji](https://fonts.google.com/specimen/Skranji) 
+* [Skranji](https://fonts.google.com/specimen/Skranji)
 
 ## Features
 
@@ -110,22 +111,74 @@ Due to the wide age group of the users, it is assumed that most users will be vi
 
 ### Existing Features
 
-- **Home Page**
+* **Home Page**
 
-Home Page contains
+'Home Page' contains the navigation menu on the top with the logo, the information for the user to follow, and the footer which contains the social media links. Information for the user shows the steps to follow and the book categories which are currently available in the book manager - this part is connected to the database and can be updated by administrator. That means that any changes in categories can be seen here.
+
+All of the next pages looks similar thanks to the Python template method.
 
 ![screenshot](documentation/home_page.png)
 
+* **Books Page**
+
+This page is the most important one of the whole project. It shows in order all the uploaded books to the database. The user can see image of the book, name of the book, category, author, short book summary and which user added it. There is an additional button provided which will lead the user to the Amazon Marketplace (with faketag).
+
 ![screenshot](documentation/books_page.png)
+
+* **Search Bar on Books Page**
+  
+Almost on the top of the 'Books Page' is placed search bar which is meant to help people to search through by book, author or category name. In the example below, I tried to find the category name 'Novel' and it actually found me only these books that have this category name. This feature is helpful for anyone and useful when many books are added into the book manager.
+
+![screenshot](documentation/novel.png)
+![screenshot](documentation/novel_search_page.png)
+
+* **Register Page**
+
+On this page, user can simply register to our book manager by typing their username and password. All of the information will be shared to our database. As part of the deffensive programming, I chose to limit the required characters to 5-15 and added password to database is hashed using Python (Werkzeug) to add security.
 
 ![screenshot](documentation/register_page.png)
 
-![screenshot](documentation/signin_page.png)
+* **Sign In Page**
+
+When user is already registered, he can sign in to our book manager using this page.
+
+![screenshot](documentation/sign_in_page.png)
+
+* **Add Book Page**
+
+By clicking the 'Add New Book' button on the navigation panel, user will be redirected to this page where he can add the book to our book manager.
 
 ![screenshot](documentation/add_book_page.png)
 ![screenshot](documentation/added_book_by_user.png)
 
-![screenshot](documentation/hdit_page.png)
+* **Edit Book Page**
+![screenshot](documentation/edit_book_page.png)
+
+* **Sign Out Page**
+![screenshot](documentation/sign_in_page.png)
+
+* **Manage Categories Page**
+![screenshot](documentation/manage_categories_page.png)
+
+* **Add Category Page**
+![screenshot](documentation/add_category_page.png)
+
+* **Edit Category Page**
+![screenshot](documentation/edit_category_page.png)
+
+* **404 Error Message**
+
+When anything goes wrong with the links of the website, the 404 page pops up to make sure it leads the user to the 'Home Page' by clicking on the button. Alternatively, user can use the navigation panel to visit another part of tthe website.
+
 ![screenshot](documentation/404_page.png)
 
+* **Flash Message**
+![screenshot](documentation/flash_message.png)
+
+* **Favicon**
+
+As a rule of thumb, I added the Favicon which relates to the topic of the project.
+
 ![screenshot](documentation/favicon.png)
+
+### Future Features
