@@ -219,6 +219,7 @@ It would be better to have uploaded images of the book covers to the database th
 I think it could be helpful to have a special place for the best upvoted books so users could easily find the popular one, especially when already many books would be posted in the book manager which means it would be harder to search through them.
 
 * **Users Profile**
+
 This feature would be the best one I suppose. Every user would have a good presentable profile with all the books he has ever added and could share it with anyone via the link provided. It could help with reachability and definitely would bring more users.
 
 ## Tools & Technologies Used
@@ -226,13 +227,13 @@ This feature would be the best one I suppose. Every user would have a good prese
 * [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content
 * [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) used for user interaction on the site
-* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) used as a back end site
-* [Flask](https://flask.palletsprojects.com/en/2.3.x/) used for developing the web application
+* [Python](https://www.python.org) used as the back-end programming language
+* [Flask](https://flask.palletsprojects.com) used as the Python framework for the site
 * [Git](https://git-scm.com) used for version control (`git add`, `git commit`, `git push`)
 * [GitHub](https://github.com) used for secure online code storage
-* [Heroku](https://heroku.com) used for hosting the deployed front-end site
+* [Heroku](https://heroku.com) used for hosting the deployed back-end site
 * [CodeAnywhere](https://codeanywhere.com) used as a cloud-based IDE for the development
-* [MongoDB](https://mongodb.com) used for database system
+* [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask
 * [Materialize](https://materializecss.com/) used as the front-end CSS framework for modern responsiveness and pre-built components
 * [Font Awesome](https://fontawesome.com/) used to obtain the media icons
 * [Google Fonts](https://fonts.google.com/) used to obtain the fonts linked in the header and used in the project
@@ -268,7 +269,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fflask-book-manager-f03e235c4fb6.herokuapp.com%2Fhome&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css_validation.png) | Pass: No Errors when validated by input - getting 2 warning for import fonts. Note! Upon clicking on the link there will be shown many errors from Materialize |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fflask-book-manager-f03e235c4fb6.herokuapp.com%2Fhome&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css_validation.png) | Pass with no errors when validated by input - getting 2 warnings for import of fonts. Note! Upon clicking on the link there will be shown many errors from Materialize |
 
 ### JavaScript
 
@@ -276,7 +277,7 @@ I have used the recommended [JSHint](https://jshint.com/) to validate my JS file
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | ![screenshot](documentation/js_validation.png) | Pass: No Errors when validated by input with ES6 standard (enabled jQuery) |
+| script.js | ![screenshot](documentation/js_validation.png) | Pass with no errors when validated by input with ES6 standard (enabled jQuery) |
 
 ## Browser Compatibility
 
@@ -294,10 +295,10 @@ I have tested my deployed project on multiple devices to check for responsivity 
 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
-| Mobile iPhone 13 | ![screenshot](assets/documentation/safari_1.jpg) | Works as expected |
-| Mobile iPhone 10 | ![screenshot](assets/documentation/safari_2.jpg) | Works as expected |
-| Tablet (DevTools) | ![screenshot](assets/documentation/tablet_responsiveness.png) | Works as expected |
-| Desktop | ![screenshot](assets/documentation/home_page.png) | Works as expected |
+| Mobile iPhone 13 | ![screenshot](documentation/safari_1.jpg) | Works as expected |
+| Mobile iPhone 10 | ![screenshot](documentation/safari_2.jpg) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/tablet_responsiveness.png) | Works as expected |
+| Desktop | ![screenshot](documentation/home_page.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -315,7 +316,7 @@ I have tested my deployed project using the Lighthouse Audit tool to check for a
 | As a first-time visitor, I want to be able to register on the page, sign-in and add a book to the book manager | ![screenshot](documentation/add_book_page.png) | All of these steps are described in the part Features, it's exactly the built flow of the website |
 | As a recurring or first-time visitor, I want to be able to find the books in the book manager and search through them, find the information about them and possibly buy them | ![screenshot](documentation/books_page.png) | Possible on the 'Books Page' to look for the books and use the Search bar for searching through them |
 | As a recurring visitor, I want to be able to access the book I uploaded on the website and be able to delete or edit it | ![screenshot](documentation/added_book_by_user.png) | Every book added to the database is managable by the user who added it thanks to the buttons |
-| As an administrator, I should be able to manage categories of the books | ![screenshot](documentation/manage_categories_page.png) | 'Manage Categories Page' is exactly built for that User Story |
+| As an administrator, I should be able to manage categories of the books | ![screenshot](documentation/manage_categories_page.png) | 'Manage Categories Page' is exactly built for that purpose |
 | As an administrator, I should be able to have access to the database | ![screenshot](documentation/database.png) | Me as the administrator can access the MongoDB database and manipulate with the data |
 
 ## Known bugs and fixes
@@ -330,3 +331,6 @@ Here is an example of a bug in the code. While testing my CSS through CSS Valida
 There are no other remaining bugs that I am aware of.
 
 # Deployment
+
+The live deployed application can be found deployed on [Heroku](https://flask-book-manager-f03e235c4fb6.herokuapp.com).
+
