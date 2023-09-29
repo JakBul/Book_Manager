@@ -28,7 +28,7 @@ nav .brand-logo {
     font-family: 'Skranji', cursive;
 }
 
-#logo {
+.logo {
     font-weight: 400;
     font-family: 'Skranji', cursive;
 }
@@ -120,7 +120,7 @@ footer .footer-heading {
 /*---------------------------------------------------- 404.html page */
 
 #error {
-    margin-top: 40px 0 40px 0;
+    margin-top: 40px;
 }
 
 #error .error-message p {

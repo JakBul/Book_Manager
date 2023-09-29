@@ -249,3 +249,84 @@ This feature would be the best one I suppose. Every user would have a good prese
 I have not used any uploaded media images or videos for this project. All the book images are covers obtained as the url address from Amazon Marketplace.
 
 # Testing
+
+I used Google Dev Tools for testing the website and its layout. This allowed me to check the responsiveness of the site and quickly debug any issues that I came across.
+
+## Code Validation
+
+### HTML
+
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate my HTML file.
+
+| Page | W3C URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Main Page | [W3C]() | ![screenshot](documentation/html_validation.png) |  |
+
+### CSS
+
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate my CSS file.
+
+| File | Jigsaw URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fflask-book-manager-f03e235c4fb6.herokuapp.com%2Fhome&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](documentation/css_validation.png) | Pass: No Errors when validated by input - getting 2 warning for import fonts. Note! Upon clicking on the link there will be shown many errors from Materialize |
+
+### JavaScript
+
+I have used the recommended [JSHint](https://jshint.com/) to validate my JS file.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| script.js | ![screenshot](documentation/js_validation.png) | Pass: No Errors when validated by input with ES6 standard (enabled jQuery) |
+
+## Browser Compatibility
+
+I have tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Browser | Screenshot | Notes |
+| --- | --- | --- |
+| Chrome | ![screenshot](documentation/home_page.png) | Works as expected |
+| Edge | ![screenshot](documentation/edge_compatibility.png) | Works as expected |
+| Safari (phone) | ![screenshot](documentation/safari_2.jpg) | Works as expected |
+
+## Responsiveness
+
+I have tested my deployed project on multiple devices to check for responsivity issues.
+
+| Device | Screenshot | Notes |
+| --- | --- | --- |
+| Mobile iPhone 13 | ![screenshot](assets/documentation/safari_1.jpg) | Works as expected |
+| Mobile iPhone 10 | ![screenshot](assets/documentation/safari_2.jpg) | Works as expected |
+| Tablet (DevTools) | ![screenshot](assets/documentation/tablet_responsiveness.png) | Works as expected |
+| Desktop | ![screenshot](assets/documentation/home_page.png) | Works as expected |
+
+## Lighthouse Audit
+
+I have tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+| Page | Size | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Home | Desktop | ![screenshot](documentation/lighthouse_home.png) | One irrelevant warning |
+| Home | Mobile | ![screenshot](documentation/lighthouse_home_mobile.png) |  |
+
+## User Story Testing
+
+| User Story | Screenshot | Comments |
+| --- | --- | --- |
+| As a first-time visitor, I want to be able to register on the page, sign-in and add a book to the book manager | ![screenshot](documentation/add_book_page.png) | All of these steps are described in the part Features, it's exactly the built flow of the website |
+| As a recurring or first-time visitor, I want to be able to find the books in the book manager and search through them, find the information about them and possibly buy them | ![screenshot](documentation/books_page.png) | Possible on the 'Books Page' to look for the books and use the Search bar for searching through them |
+| As a recurring visitor, I want to be able to access the book I uploaded on the website and be able to delete or edit it | ![screenshot](documentation/added_book_by_user.png) | Every book added to the database is managable by the user who added it thanks to the buttons |
+| As an administrator, I should be able to manage categories of the books | ![screenshot](documentation/manage_categories_page.png) | 'Manage Categories Page' is exactly built for that User Story |
+| As an administrator, I should be able to have access to the database | ![screenshot](documentation/database.png) | Me as the administrator can access the MongoDB database and manipulate with the data |
+
+## Known bugs and fixes
+
+Here is an example of a bug in the code. While testing my CSS through CSS Validation, I got an error for the margin-top using too many values. I didn't find it myself and I was thinking why it doesn't work properly on the deployed website. Thanks to the CSS Validation I found the mistake and could easily fix it by using just one value of 40px which I actually need.
+
+![screenshot](documentation/bug_css.png)
+![screenshot](documentation/bug_css_2.png)
+
+## Unfixed Bugs
+
+There are no other remaining bugs that I am aware of.
+
+# Deployment
