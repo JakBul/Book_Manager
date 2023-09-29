@@ -212,7 +212,7 @@ As a rule of thumb, I added the Favicon which relates to the topic of the projec
 
 * **Uploaded Images for Books**
 
-It would be better to have uploaded images of the book covers to the database than using the URL of image. However, how would I check the copy rights? 
+It would be better to have uploaded images of the book covers to the database than using the URL of image. However, how would I check the copy rights? Is it not easier for users just paste the link?
 
 * **Recommended Books**
 
@@ -221,3 +221,31 @@ I think it could be helpful to have a special place for the best upvoted books s
 * **Users Profile**
 This feature would be the best one I suppose. Every user would have a good presentable profile with all the books he has ever added and could share it with anyone via the link provided. It could help with reachability and definitely would bring more users.
 
+## Tools & Technologies Used
+
+* [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content
+* [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) used for user interaction on the site
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) used as a back end site
+* [Flask](https://flask.palletsprojects.com/en/2.3.x/) used for developing the web application
+* [Git](https://git-scm.com) used for version control (`git add`, `git commit`, `git push`)
+* [GitHub](https://github.com) used for secure online code storage
+* [Heroku](https://heroku.com) used for hosting the deployed front-end site
+* [CodeAnywhere](https://codeanywhere.com) used as a cloud-based IDE for the development
+* [MongoDB](https://mongodb.com) used for database system
+* [Materialize](https://materializecss.com/) used as the front-end CSS framework for modern responsiveness and pre-built components
+* [Font Awesome](https://fontawesome.com/) used to obtain the media icons
+* [Google Fonts](https://fonts.google.com/) used to obtain the fonts linked in the header and used in the project
+* [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools) used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project
+* [Grammarly](https://www.grammarly.com/) used to fix the thousands of grammar errors across the project
+* [Coloors](https://coolors.co/) used to create a color palette for the design
+* [W3C Markup Validation Service](https://validator.w3.org/) used to validate all HTML code written and used on this webpage
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) used to validate all CSS code written and used on this webpage
+* [JSHint](https://jshint.com/) used to validate all JS code written and used on this webpage
+* [AmIResponsive](http://ami.responsivedesign.is/) used to generate responsive images used in README file
+
+## Media
+
+I have not used any uploaded media images or videos for this project. All the book images are covers obtained as the url address from Amazon Marketplace.
+
+# Testing
