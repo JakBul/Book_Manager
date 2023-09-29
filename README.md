@@ -107,6 +107,8 @@ I decided to use Google font 'Lato' with different font weights throughout the p
 
 ## Features
 
+All of the next pages looks similar thanks to the Python template method.
+
 Due to the wide age group of the users, it is assumed that most users will be viewing the site not only on their mobile phones but also on their tablets or computers. Therefore, creating something responsive is integral to the design.
 
 ### Existing Features
@@ -114,8 +116,6 @@ Due to the wide age group of the users, it is assumed that most users will be vi
 * **Home Page**
 
 'Home Page' contains the navigation menu on the top with the logo, the information for the user to follow, and the footer which contains the social media links. Information for the user shows the steps to follow and the book categories which are currently available in the book manager - this part is connected to the database and can be updated by administrator. That means that any changes in categories can be seen here.
-
-All of the next pages looks similar thanks to the Python template method.
 
 ![screenshot](documentation/home_page.png)
 
@@ -146,34 +146,61 @@ When user is already registered, he can sign in to our book manager using this p
 
 * **Add Book Page**
 
-By clicking the 'Add New Book' button on the navigation panel, user will be redirected to this page where he can add the book to our book manager.
+By clicking the 'Add New Book' button on the navigation panel, user will be redirected to this page where he can add the book to our book manager. It is a form which user can fill and then by adding the book to the database, book will be shown as the last one on the 'Books Page'. As part of the deffensive programming, the input fields are required and has to be filled in. The current signed in user will be shown as the user who added the book to the database.
+
+As shown on the second screenshot below, the user is now able to see the buttons for editing or deleting the book itself.
 
 ![screenshot](documentation/add_book_page.png)
 ![screenshot](documentation/added_book_by_user.png)
 
 * **Edit Book Page**
+
+When the user want to edit the book, he will be redirected to this page where is the form with already filled information of the actual book. By editing the book, the information will be changed in the database and then shown on the page. If the user would like to discard all of the changes, there is a button 'Cancel' which won't submit any changes made.
+
 ![screenshot](documentation/edit_book_page.png)
 
 * **Sign Out Page**
-![screenshot](documentation/sign_in_page.png)
+
+The user can use the navigation panel when he would like to sign out from the page.
+
+![screenshot](documentation/sign_out_page.png)
 
 * **Manage Categories Page**
+
+This is a part of the website which is accessible only for administrator. As mentioned above, I had to make sure that administrator could manipulate with categories and this is the page that is connected to database. The administrator can see the current categories, edit them, delete them or add a new one. Any changes are visible on the 'Home Page'.
+
 ![screenshot](documentation/manage_categories_page.png)
 
 * **Add Category Page**
+
+On this page, the administrator can add new category to the database.
+
 ![screenshot](documentation/add_category_page.png)
 
 * **Edit Category Page**
+
+On this page, the administrator can edit the current category, which will be updated in the database after submit. If the administrator would like to discard all of the changes, there is a button 'Cancel' which won't submit any changes.
+
 ![screenshot](documentation/edit_category_page.png)
 
 * **404 Error Message**
 
-When anything goes wrong with the links of the website, the 404 page pops up to make sure it leads the user to the 'Home Page' by clicking on the button. Alternatively, user can use the navigation panel to visit another part of tthe website.
+When anything goes wrong with the links of the website, the 404 page pops up to make sure it leads the user to the 'Home Page' by clicking on the button. Alternatively, user can use the navigation panel to visit another part of the website.
 
 ![screenshot](documentation/404_page.png)
 
 * **Flash Message**
+
+The flash messages are generated with Python and provide additional feedback to users interaction, for example after adding a book to the book manager or registration. They are always under the navigation panel to make sure they are visible.
+
 ![screenshot](documentation/flash_message.png)
+
+* **Responsive Navigation Panel**
+
+As part of the responsive design, I had to be sure that the navigation is always visible and accessible to the user. That's why I used the dynamic navbar from Materialize for this project. It follow our UX principles and add a nice touch when the user uses a smaller device.
+
+![screenshot](documentation/navbar_small_device.png)
+![screenshot](documentation/navbar_small_device_open.png)
 
 * **Favicon**
 
@@ -182,3 +209,15 @@ As a rule of thumb, I added the Favicon which relates to the topic of the projec
 ![screenshot](documentation/favicon.png)
 
 ### Future Features
+
+* **Uploaded Images for Books**
+
+It would be better to have uploaded images of the book covers to the database than using the URL of image. However, how would I check the copy rights? 
+
+* **Recommended Books**
+
+I think it could be helpful to have a special place for the best upvoted books so users could easily find the popular one, especially when already many books would be posted in the book manager which means it would be harder to search through them.
+
+* **Users Profile**
+This feature would be the best one I suppose. Every user would have a good presentable profile with all the books he has ever added and could share it with anyone via the link provided. It could help with reachability and definitely would bring more users.
+
