@@ -105,6 +105,27 @@ I decided to use Google font 'Lato' with different font weights throughout the p
 
 * [Skranji](https://fonts.google.com/specimen/Skranji)
 
+## Wireframes
+
+To follow the best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+### Home Page Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframe_home_page_mobile.png) |
+| Tablet | ![screenshot](documentation/wireframe_home_page_tablet.png) |
+| Desktop | ![screenshot](documentation/wireframe_home_page_desktop.png) |
+
+### Books Page Wireframes
+
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframe_books_page_mobile.png) |
+| Tablet | ![screenshot](documentation/wireframe_books_page_tablet.png) |
+| Desktop | ![screenshot](documentation/wireframe_books_page_desktop.png) |
+
 ## Features
 
 All of the next pages looks similar thanks to the Python template method.
