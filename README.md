@@ -264,6 +264,7 @@ This feature would be the best one I suppose. Every user would have a good prese
 * [W3C Markup Validation Service](https://validator.w3.org/) used to validate all HTML code written and used on this webpage
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) used to validate all CSS code written and used on this webpage
 * [JSHint](https://jshint.com/) used to validate all JS code written and used on this webpage
+* [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) used to validate all of my Python files
 * [AmIResponsive](http://ami.responsivedesign.is/) used to generate responsive images used in README file
 * [Balsamiq](https://balsamiq.com/wireframes) used to design my wireframes
 
@@ -314,11 +315,21 @@ I used Google Dev Tools for testing the website and its layout. This allowed me 
 
 ### HTML
 
-I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate my HTML file.
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate my HTML file. However, I have had a problem with this task..
 
-| Page | W3C URL | Screenshot | Notes |
-| --- | --- | --- | --- |
-| Main Page | [W3C]() | ![screenshot](documentation/html_validation.png) |  |
+Python uses Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}`, and they will not validate properly if I am copying/pasting into the HTML validator. In order to properly validate HTML pages with Jinja syntax, I have to use **View Page Source** on each website and validate by input the entire compiled code.
+
+Even this approach gets some warnings, but most of them were caused by Materialize or Jinja template.
+
+| Page | Screenshot | Notes |
+| --- | --- | --- |
+| Home Page | ![screenshot](documentation/html_validation_home_page.png) | |
+| Books Page | ![screenshot](documentation/html_validation_books_page.png) | |
+| Sign In Page | ![screenshot](documentation/html_validation_sign_in_page.png) | |
+| Register Page | ![screenshot](documentation/html_validation_register_page.png) | |
+| Add Book | ![screenshot](documentation/html_validation_add_book_page.png) | |
+| Edit Book | ![screenshot](documentation/html_validation_edit_book_page.png) | 1 Error has already been fixed |
+| 404 Error Page | ![screenshot](documentation/html_validation_404_page.png) | |
 
 ### CSS
 
@@ -334,7 +345,15 @@ I have used the recommended [JSHint](https://jshint.com/) to validate my JS file
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | ![screenshot](documentation/js_validation.png) | Pass with no errors when validated by input with ES6 standard (enabled jQuery) |
+| script.js | ![screenshot](documentation/js_validation.png) | Pass with no errors when validated by input with ES6 standard (enabled jQuery)  |
+
+### Python
+
+I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| app.py | ![screenshot](documentation/python_validation.png) | validated by input |
 
 ## Browser Compatibility
 
