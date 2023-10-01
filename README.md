@@ -142,7 +142,7 @@ Due to the wide age group of the users, it is assumed that most users will be vi
 
 * **Books Page**
 
-This page is the most important one of the whole project. It shows in order all the uploaded books to the database. The user can see an image of the book, the name of the book, the category, the author, the short book summary and which user added it. There is an additional button provided which will lead the user to the Amazon Marketplace (with fake tag).
+This page is the most important one of the whole project. It shows in order all the uploaded books to the database. The user can see an image of the book, the name of the book, the category, the author, the short book summary and which user added it. There is an additional button provided which will lead the user to the Amazon Marketplace (with a fake tag).
 
 ![screenshot](documentation/books_page.png)
 
@@ -157,7 +157,7 @@ Almost on the top of the 'Books Page' is placed a search bar which is meant to h
 
 On this page, users can simply register to the book manager by typing their username and password. All of the information will be shared with the database.
 
-As part of the defensive programming, I chose to limit the required characters to 5-15 and the added password to the database use Python to add security(hashed password using Werkzeug).
+As part of the defensive programming, I chose to limit the required characters to 5-15 and the added password to the database uses Python to add security(hashed password using Werkzeug).
 
 ![screenshot](documentation/register_page.png)
 
@@ -169,7 +169,7 @@ When the user is already registered, he can sign in to the book manager using th
 
 * **Add Book Page**
 
-By clicking the 'Add New Book' button on the navigation panel, the user will be redirected to this page where he can add the book to the book manager. It is a form that user can fill and then by adding the book to the database, the book will be shown as the last one on the 'Books Page'.
+By clicking the 'Add New Book' button on the navigation panel, the user will be redirected to this page where he can add the book to the book manager. It is a form that the user can fill and then by adding the book to the database, the book will be shown as the last one on the 'Books Page'.
 
 As part of the defensive programming, the input fields are required and have to be filled in. The current signed-in user will be shown as the user who added the book to the database. Additionally, this page can be opened only when a user is logged in, otherwise the user gets an error.
 
@@ -194,7 +194,7 @@ The user can use the navigation panel when he would like to sign out from the pa
 
 * **Manage Categories Page**
 
-This is a part of the website which is accessible only to administrators. As mentioned above, I had to make sure that the administrator could manipulate categories and this is the page that is connected to the database. The administrator can see the current categories, edit them, delete them or add a new one. Any changes are visible on the 'Home Page'.
+This is a part of the website that is accessible only to administrators. As mentioned above, I had to make sure that the administrator could manipulate categories and this is the page that is connected to the database. The administrator can see the current categories, edit them, delete them or add a new one. Any changes are visible on the 'Home Page'.
 
 As part of the defensive programming, this page can be opened only when the user is the administrator, otherwise the user gets an error.
 
@@ -230,7 +230,7 @@ The flash messages are generated with Python and provide additional feedback to 
 
 * **Responsive Navigation Panel**
 
-As part of the responsive design, I had to be sure that the navigation is always visible and accessible to the user. That's why I used the dynamic navbar from Materialize for this project. It follows the chosen UX principles and adds a nice touch when the user uses a smaller device.
+As part of the responsive design, I had to be sure that the navigation was always visible and accessible to the user. That's why I used the dynamic navbar from Materialize for this project. It follows the chosen UX principles and adds a nice touch when the user uses a smaller device.
 
 ![screenshot](documentation/navbar_small_device.png)
 ![screenshot](documentation/navbar_small_device_open.png)
@@ -278,7 +278,8 @@ This feature would be the best one I suppose. Every user would have a good prese
 * [JSHint](https://jshint.com/) used to validate all JS code written and used on this webpage
 * [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) used to validate all of my Python files
 * [AmIResponsive](http://ami.responsivedesign.is/) used to generate responsive images used in README file
-* [Balsamiq](https://balsamiq.com/wireframes) used to design my wireframes
+* [Balsamiq](https://balsamiq.com/wireframes) used to design the wireframes
+* [Lucid](https://www.lucidchart.com/pages/examples/er-diagram-tool) used to design the database ER diagram
 
 ## Media
 
@@ -319,6 +320,8 @@ It contains 3 collections:
     | username | String | |
     | password | String | uses Secure Hash Algorithm (SHA) |
 
+![screenshot](documentation/ER_Diagram.png)
+
 # Testing
 
 I used Google Dev Tools to test the website and its layout. This allowed me to check the responsiveness of the site and quickly debug any issues that I came across.
@@ -357,7 +360,7 @@ I have used the recommended [JSHint](https://jshint.com/) to validate my JS file
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | ![screenshot](documentation/js_validation.png) | Pass with no errors when validated by input with ES6 standard (enabled jQuery)  |
+| script.js | ![screenshot](documentation/js_validation.png) | Pass with no errors when validated by input with ES6 standard (enabled jQuery) |
 
 ### Python
 
@@ -394,8 +397,10 @@ I have tested my deployed project using the Lighthouse Audit tool to check for a
 
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Desktop | ![screenshot](documentation/lighthouse_home.png) | One irrelevant warning |
-| Home | Mobile | ![screenshot](documentation/lighthouse_home_mobile.png) |  |
+| Home | Desktop | ![screenshot](documentation/lighthouse_home_page_desktop.png) | Lower accessibility because of Jinja Template |
+| Home | Mobile | ![screenshot](documentation/lighthouse_home_page_mobile.png) | Lower accessibility because of Jinja Template |
+| Books | Desktop | ![screenshot](documentation/lighthouse_books_page_desktop.png) | No major issues |
+| Books | Mobile | ![screenshot](documentation/lighthouse_books_page_mobile.png) | No major issues |
 
 ## User Story Testing
 
