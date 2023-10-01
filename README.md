@@ -365,7 +365,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| app.py | ![screenshot](documentation/python_validation.png) | validated by input |
+| app.py | ![screenshot](documentation/python_validation.png) | Pass with no errors when validated by input |
 
 ## Browser Compatibility
 
