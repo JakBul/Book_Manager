@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
+<!-- Search bar -->
 <div class="row card-panel grey lighten-4">
   <form action="{{ url_for('search') }}" method="POST" class="col s12">
     <div class="row valign-wrapper center-align">
@@ -28,6 +29,7 @@
   </form>
 </div>
 
+<!-- Book card -->
 {% if books|length > 0 %} {% for book in books %}
 <div class="col s12 m7">
   <div class="card horizontal">

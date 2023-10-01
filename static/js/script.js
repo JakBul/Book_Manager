@@ -1,3 +1,4 @@
+//Initialization of Materialize components
 $(document).ready(function () {
     $(".sidenav").sidenav({ edge: "right" });
     $(".collapsible").collapsible();
