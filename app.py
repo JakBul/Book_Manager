@@ -99,6 +99,8 @@ def signout():
 
 @app.route("/add_book", methods=["GET", "POST"])
 def add_book():
+    if not session.get('user'):
+        return render_template("404.html")
     if request.method == "POST":
         must_read = "on" if request.form.get("must_read") else "off"
         book = {
@@ -121,6 +123,10 @@ def add_book():
 
 @app.route("/edit_book/<book_id>", methods=["GET", "POST"])
 def edit_book(book_id):
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    if not book or not session.get('user') or session['user'] != book[
+            'created_by']:
+        return render_template("404.html")
     if request.method == "POST":
         must_read = "on" if request.form.get("must_read") else "off"
         submit = {
@@ -136,13 +142,16 @@ def edit_book(book_id):
         mongo.db.books.update_one({"_id": ObjectId(book_id)}, submit)
         flash("Book Successfully Updated")
 
-    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_book.html", book=book,  categories=categories)
 
 
 @app.route("/delete_book/<book_id>")
 def delete_book(book_id):
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    if not book or not session.get('user') or session['user'] != book[
+            'created_by']:
+        return render_template("404.html")
     mongo.db.books.delete_one({"_id": ObjectId(book_id)})
     flash("Book Successfully Deleted")
     return redirect(url_for("get_books"))
@@ -150,12 +159,17 @@ def delete_book(book_id):
 
 @app.route("/get_categories")
 def get_categories():
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    if session.get('user') and session['user'] == "admin":
+        categories = list(mongo.db.categories.find().sort("category_name", 1))
+        return render_template("categories.html", categories=categories)
+    else:
+        return render_template("404.html")
 
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    if not session.get('user') or session['user'] != "admin":
+        return render_template("404.html")
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -169,6 +183,9 @@ def add_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    if not category or not session.get('user') or session['user'] != "admin":
+        return render_template("404.html")
     if request.method == "POST":
         submit = {
             "$set": {"category_name": request.form.get("category_name")}
@@ -177,12 +194,14 @@ def edit_category(category_id):
         flash("Category Successfully Updated")
         return redirect(url_for("get_categories"))
 
-    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template('edit_category.html', category=category)
 
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    if not category or not session.get('user') or session['user'] != "admin":
+        return render_template("404.html")
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))

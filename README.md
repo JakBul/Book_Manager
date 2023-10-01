@@ -155,7 +155,9 @@ Almost on the top of the 'Books Page' is placed search bar which is meant to hel
 
 * **Register Page**
 
-On this page, user can simply register to our book manager by typing their username and password. All of the information will be shared to our database. As part of the deffensive programming, I chose to limit the required characters to 5-15 and added password to database is hashed using Python (Werkzeug) to add security.
+On this page, user can simply register to our book manager by typing their username and password. All of the information will be shared to our database.
+
+As part of the deffensive programming, I chose to limit the required characters to 5-15 and added password to database is hashed using Python (Werkzeug) to add security.
 
 ![screenshot](documentation/register_page.png)
 
@@ -167,7 +169,9 @@ When user is already registered, he can sign in to our book manager using this p
 
 * **Add Book Page**
 
-By clicking the 'Add New Book' button on the navigation panel, user will be redirected to this page where he can add the book to our book manager. It is a form which user can fill and then by adding the book to the database, book will be shown as the last one on the 'Books Page'. As part of the deffensive programming, the input fields are required and has to be filled in. The current signed in user will be shown as the user who added the book to the database.
+By clicking the 'Add New Book' button on the navigation panel, user will be redirected to this page where he can add the book to our book manager. It is a form which user can fill and then by adding the book to the database, book will be shown as the last one on the 'Books Page'.
+
+As part of the deffensive programming, the input fields are required and has to be filled in. The current signed in user will be shown as the user who added the book to the database. Aditionally, this page can be open only when a user is logged in, otherwise the user gets an error.
 
 As shown on the second screenshot below, the user is now able to see the buttons for editing or deleting the book itself.
 
@@ -177,6 +181,8 @@ As shown on the second screenshot below, the user is now able to see the buttons
 * **Edit Book Page**
 
 When the user want to edit the book, he will be redirected to this page where is the form with already filled information of the actual book. By editing the book, the information will be changed in the database and then shown on the page. If the user would like to discard all of the changes, there is a button 'Cancel' which won't submit any changes made.
+
+As part of the deffensive programming, this page can be open only when the user who created the book is logged in, otherwise the user gets an error. The same counts for deleting the book.
 
 ![screenshot](documentation/edit_book_page.png)
 
@@ -190,17 +196,23 @@ The user can use the navigation panel when he would like to sign out from the pa
 
 This is a part of the website which is accessible only for administrator. As mentioned above, I had to make sure that administrator could manipulate with categories and this is the page that is connected to database. The administrator can see the current categories, edit them, delete them or add a new one. Any changes are visible on the 'Home Page'.
 
+As part of the deffensive programming, this page can be open only when the user is administrator, otherwise the user gets an error.
+
 ![screenshot](documentation/manage_categories_page.png)
 
 * **Add Category Page**
 
 On this page, the administrator can add new category to the database.
 
+As part of the deffensive programming, this page can be open only when the user is administrator, otherwise the user gets an error.
+
 ![screenshot](documentation/add_category_page.png)
 
 * **Edit Category Page**
 
 On this page, the administrator can edit the current category, which will be updated in the database after submit. If the administrator would like to discard all of the changes, there is a button 'Cancel' which won't submit any changes.
+
+As part of the deffensive programming, this page can be open only when the user is administrator, otherwise the user gets an error. The same counts for deleting the category.
 
 ![screenshot](documentation/edit_category_page.png)
 
